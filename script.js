@@ -1,23 +1,16 @@
-// const strongwords=document.getElementsByTagName("strong");
-const link=document.getElementTagName("a");
-const strongwords=document.getElementsByTagName("strong");
+const link = document.getElementsByTagName("a")[0]; // assuming there is only one link
+const strongwords = document.getElementsByTagName("strong");
+
 function highlight() {
-    //Write your code here
-	for(const words of strongwords){
-        words.style.color='blue';
+    for(const word of strongwords){
+       word.style.color = 'green';
     }
-
 }
-
 
 function return_normal() {
-    //Write your code here
-	for(const words of strongwords)
-		{
-			strongwords.style.color='black';
-		}
-
-    
+    for(const word of strongwords){
+       word.style.color = 'black';
+    }
 }
-// link.addEventListener('onMouseOver',highlight);
-// link.addEventListener('onMouseOut',return_normal)
+
+link.addEventListener('mouseenter', highlight);
